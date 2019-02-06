@@ -1,0 +1,25 @@
+{
+  "name": "baaamzon",
+  "version": "1.0.0",
+  "description": "This is mysql project",
+  "main": "bamazonCustomer.js",
+  "dependencies": {
+    "inquire": "^0.4.8",
+    "inquirer": "^6.2.2",
+    "mysql": "^2.16.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ciscoara/baaamzon.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ciscoara/baaamzon/issues"
+  },
+  "homepage": "https://github.com/ciscoara/baaamzon#readme"
+}
