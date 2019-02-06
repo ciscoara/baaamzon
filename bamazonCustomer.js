@@ -28,7 +28,7 @@ function validateInput(value) {
 }
 
 // promptUserPurchase will prompt the user for the item/quantity they would like to purchase
-function promptUserPurchase() {
+function promptUser() {
 	// console.log('___ENTER promptUserPurchase___');
 
 	// Prompt the user to select an item
@@ -48,7 +48,7 @@ function promptUserPurchase() {
 			filter: Number
 		}
 	]).then(function(input) {
-		// console.log('Customer has selected: \n    item_id = '  + input.item_id + '\n    quantity = ' + input.quantity);
+
 
 		var item = input.item_id;
 		var quantity = input.quantity;
@@ -73,7 +73,6 @@ function promptUserPurchase() {
 
 					// Construct the updating query string
 					var updateQueryStr = 'UPDATE products SET stock_quantity = ' + (productData.stock_quantity - quantity) + ' WHERE item_id = ' + item;
-					// console.log('updateQueryStr = ' + updateQueryStr);
 
 					// Update the inventory
 					connection.query(updateQueryStr, function(err, data) {
@@ -125,15 +124,13 @@ function displayInventory() {
 	  	console.log("---------------------------------------------------------------------\n");
 
 	  	//Prompt the user for item/quantity they would like to purchase
-	  	promptUserPurchase();
+	  	promptUser();
 	})
 }
 
 // runBamazon will execute the main application logic
 function runBamazon() {
-	// console.log('___ENTER runBamazon___');
 
-	// Display the available inventory
 	displayInventory();
 }
 
